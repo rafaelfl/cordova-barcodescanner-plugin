@@ -182,6 +182,9 @@ public class BarcodeScanner extends CordovaPlugin {
         intentScan.addCategory(Intent.CATEGORY_DEFAULT);
         // avoid calling other phonegap apps
         intentScan.setPackage(this.cordova.getActivity().getApplicationContext().getPackageName());
+        
+        //@rafaelf. Adicionando único formato a ser tratado: QR_CODE
+        //intentScan.putExtra("SCAN_MODE", "QR_CODE_MODE")
 
         //@rafaelf. Adicionando único formato a ser tratado: QR_CODE
         //intentScan.putExtra("SCAN_MODE", "QR_CODE_MODE")
