@@ -218,7 +218,7 @@ parentViewController:(UIViewController*)parentViewController
     self.parentViewController = parentViewController;
     self.alternateXib         = alternateXib;
     
-    self.is1D      = YES;
+    self.is1D      = NO; //@rafaelf. Changed to NO
     self.is2D      = YES;
     self.capturing = NO;
     
