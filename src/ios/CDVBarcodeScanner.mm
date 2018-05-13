@@ -420,14 +420,15 @@ parentViewController:(UIViewController*)parentViewController
     try {
         DecodeHints decodeHints;
         decodeHints.addFormat(BarcodeFormat_QR_CODE);
-        decodeHints.addFormat(BarcodeFormat_DATA_MATRIX);
-        decodeHints.addFormat(BarcodeFormat_UPC_E);
-        decodeHints.addFormat(BarcodeFormat_UPC_A);
-        decodeHints.addFormat(BarcodeFormat_EAN_8);
-        decodeHints.addFormat(BarcodeFormat_EAN_13);
-        decodeHints.addFormat(BarcodeFormat_CODE_128);
-        decodeHints.addFormat(BarcodeFormat_CODE_39);
-        decodeHints.addFormat(BarcodeFormat_ITF);
+        //@rafaelf. Removed the formats other than QR_CODE
+        //decodeHints.addFormat(BarcodeFormat_DATA_MATRIX);
+        //decodeHints.addFormat(BarcodeFormat_UPC_E);
+        //decodeHints.addFormat(BarcodeFormat_UPC_A);
+        //decodeHints.addFormat(BarcodeFormat_EAN_8);
+        //decodeHints.addFormat(BarcodeFormat_EAN_13);
+        //decodeHints.addFormat(BarcodeFormat_CODE_128);
+        //decodeHints.addFormat(BarcodeFormat_CODE_39);
+        //decodeHints.addFormat(BarcodeFormat_ITF);
         
         // here's the meat of the decode process
         Ref<LuminanceSource>   luminanceSource   ([self getLuminanceSourceFromSample: sampleBuffer imageBytes:&imageBytes]);
